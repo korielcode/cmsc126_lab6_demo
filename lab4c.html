@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB4C Javascript</title>
+    <link rel="stylesheet" href="lab4c_styles.css">
+    <script src="lab4c_scripts.js"></script>
+</head>
+<body>
+    <!-- Time Button -->
+    <div id="show_time" class="center">
+        <button onclick="time_now()">Show Current Date</button>
+        <p id="time"></p>
+    </div>
+    <!-- Student Add Form -->
+    <div class="center">
+        <h2>Add Student</h2>
+        <form style="display: grid; gap: 10px; align-items: center;" onsubmit="add_student(event)">
+            <!-- name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <span id="name-error" class="error-message"></span>
+            <!-- age -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            <span id="age-error" class="error-message"></span>
+            <!-- email -->
+            <label for="email">UP Mail:</label>
+            <input type="email" id="email" name="email" required>
+            <span id="email-error" class="error-message"></span>
+            <!-- course dropdown -->
+            <label for="course">Course:</label>
+            <select id="course" name="course" required>
+                <option value="BA Food Appreciation">BA Food Appreciation</option>
+                <option value="BA Applied Poetry of the Future">BA Applied Poetry of the Future</option>
+                <option value="BS Computer Repair Shop">BS Computer Repair Shop</option>
+                <option value="BS Video Gaming">BS Video Gaming</option>
+                <option value="BS Installing and Downloading">BS Installing and Downloading</option>
+            </select>
+            <span id="course-error" class="error-message"></span>
+            <!-- submit button -->
+            <button type="submit">Submit</button>
+        </form>
+        <p id="confirmation"></p>
+        <p id = "confirmation"></p>
+    </div>
+    <!-- Student Search -->
+    <div class="center", id="student_searching">
+        <h2>Search Student</h2>
+        <form style="display: grid; gap: 10px; align-items: center;" onsubmit="search_student(event)">
+            <!-- search -->
+            <label for="search">Search Student Number:</label>
+            <input type="text" id="search" name="search" required>
+            <span id="search-error" class="error-message"></span>
+            <!-- submit button -->
+            <button type="submit">Search</button>
+        </form>
+        <p id="search_result"></p>
+    </div>
+    <!-- Display All Students -->
+    <div class="center", id="display_all_students">
+        <h2>Display All Students</h2>
+        <button onclick="display_students()">Display All Students</button>
+        <table id="students_table">
+            <tr>
+                <th>Student Number</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>UP Mail</th>
+                <th>Course</th>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

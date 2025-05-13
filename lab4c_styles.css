@@ -1,0 +1,26 @@
+.center {
+    align-items: center;
+    justify-content: center; 
+    display: flex;
+    flex-direction: column;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Initially hide the table */
+#students_table {
+    display: none;
+    /* improve padding */
+    padding: 20px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+    align-items: center;
+
+}
